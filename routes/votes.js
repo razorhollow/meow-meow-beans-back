@@ -9,5 +9,5 @@ const { decodeUserFromToken, checkAuth } = middleware
 
 /*---------- Protected Routes ----------*/
 router.use(decodeUserFromToken)
-router.post('/', checkAuth, votesCtrl.castVote)
+router.put('/', checkAuth, votesCtrl.castVote)
 module.exports = router
